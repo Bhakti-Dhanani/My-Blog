@@ -1,7 +1,12 @@
 // import type { Core } from '@strapi/strapi';
+import customRoutes from './api/post/routes/custom-routes';
+
+
 
 export default {
+  
   /**
+   * 
    * An asynchronous register function that runs before
    * your application is initialized.
    *

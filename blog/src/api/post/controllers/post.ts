@@ -41,13 +41,13 @@ export default factories.createCoreController('api::post.post',({ strapi })=>({
         }
       },
     
-      async deletePost(ctx) {
+      async delete(ctx) {
         try {
           const { id } = ctx.params;
           const deletedPost = await strapi.service("api::post.post").deletePost(id);
           ctx.body = deletedPost;
         } catch (err) {
-          ctx.throw(500, err);
+          ctx.throw(500, err.message);
         }
       },
 }));
